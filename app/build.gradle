@@ -30,12 +30,6 @@ android {
     }
 }
 
-repositories {
-    flatDir {
-        dirs 'libs'
-    }
-}
-
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
@@ -46,6 +40,5 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    implementation name: 'json'
-    implementation 'com.github.javadev:underscore:1.66'
+    implementation 'com.github.smart-fun:XmlToJson:1.4.4'
 }

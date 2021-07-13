@@ -12,17 +12,14 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import com.finaltest.myapplication.databinding.FragmentFirstBinding;
 
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.StringWriter;
 
-import javax.xml.transform.OutputKeys;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
+import fr.arnaudguyon.xmltojsonlib.XmlToJson;
 
 public class FirstFragment extends Fragment {
 
@@ -49,6 +46,10 @@ public class FirstFragment extends Fragment {
                         .navigate(R.id.action_FirstFragment_to_SecondFragment);
             }
         });
+
+        String xmlString = readXML();
+        XmlToJson xmlToJson = new XmlToJson.Builder(xmlString).build();
+        JSONObject jsonObject = xmlToJson.toJson();
     }
 
     public String readXML() {

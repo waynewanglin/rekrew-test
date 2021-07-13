@@ -20,7 +20,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import org.json.*;
-import com.github.underscore.lodash.U;
 
 import java.io.BufferedReader;
 import java.io.Console;
