@@ -41,4 +41,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'com.github.smart-fun:XmlToJson:1.4.4'
+    implementation 'com.github.javadev:underscore:1.68'
+    implementation 'com.github.rdruilhe.json-schema:org.everit.json.schema:1.1.1'
 }
