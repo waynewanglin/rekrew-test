@@ -6,6 +6,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.util.Log;
 import android.view.View;
 
 import androidx.navigation.NavController;
@@ -18,6 +19,15 @@ import com.finaltest.myapplication.databinding.ActivityMainBinding;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import org.json.*;
+import com.github.underscore.lodash.U;
+
+import java.io.BufferedReader;
+import java.io.Console;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
@@ -26,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -43,6 +52,22 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+//        String line;
+//        StringBuilder total = new StringBuilder();
+//
+//        try {
+//            InputStream is = getAssets().open("ab.xml");
+//            BufferedReader r = new BufferedReader(new InputStreamReader(is, "UTF-8"));
+//            total = new StringBuilder();
+//
+//            while ((line = r.readLine()) != null) {
+//                total.append(line + "\n");
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        Log.e("~~~~~~~~~~~test1234s", total.toString());
     }
 
     @Override
